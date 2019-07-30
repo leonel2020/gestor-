@@ -14,6 +14,15 @@ import java.util.ArrayList;
 public class GestorDePaquetesDeProyectore {
     ArrayList<PaqueteProyecto>PaqueteProyecto= new ArrayList<>();
    private String Empresa;
+   
+   PaqueteProyecto buscarPaqueteDeProyectores(int codPaq){
+       for(int i=0;i<PaqueteProyecto.size();i++){
+           if (PaqueteProyecto.get(i)==PaqueteProyecto.get(codPaq)){
+               return PaqueteProyecto.get(i);
+           }
+       }
+       return null;
+   }
 
     public ArrayList<PaqueteProyecto> getPaqueteProyecto() {
         return PaqueteProyecto;
